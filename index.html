@@ -9,66 +9,52 @@
     <canvas id="webgl" width="400" height="400">
     Please use a browser that supports "canvas"
     </canvas>
+    <p>
+      
+    <p id="numdot"> XXX </p>
 
     <div class="controls">
-      <button type="button" id="green">Green</button>
-      <button type="button" id="red">Red</button>
-      <button type="button" id="blue">Blue</button>
-      <button type="button" id="clear">Clear</button>
-      <button type="button" id="pointButton">Point</button>
-      <button type="button" id="triangleButton">Triangle</button>
-      <button type="button" id="circleButton">Circle</button>
-      <br/>
-      <button type="button" id="makeDrawing">Make My Drawing!</button>
-      <img id="myImage" src="logo.jpg" alt="Description" style="width: 200px; margin-right: 20px;">
+      <!-- Existing buttons (if any) -->
+      <button id="animationOn">Start Animation</button>
+      <button id="animationOff">Stop Animation</button>
     </div>
 
     <div class="sliders">
       <div class="slider-container">
-        <label for="redSlide">Red</label>
-        <input type="range" min="0" max="100" value="100" id="redSlide">
-        <span id="redValue">1.00</span>
+        <label for="angleSlide">Camera Angle</label>
+        <input type="range" min="-180" max="180" value="25" id="angleSlide">
+        <span id="angleValue">25</span>
       </div>
       <div class="slider-container">
-        <label for="greenSlide">Green</label>
-        <input type="range" min="0" max="100" value="100" id="greenSlide">
-        <span id="greenValue">1.00</span>
+        <label for="headSlide">Head Angle</label>
+        <input type="range" min="-25" max="25" value="-2" id="headSlide">
+        <span id="headValue">-2</span>
       </div>
       <div class="slider-container">
-        <label for="blueSlide">Blue</label>
-        <input type="range" min="0" max="100" value="100" id="blueSlide">
-        <span id="blueValue">1.00</span>
+        <label for="rightArmSlide">Right Arm Angle</label>
+        <input type="range" min="215" max="260" value="225" id="rightArmSlide">
+        <span id="rightArmValue">225</span>
       </div>
       <div class="slider-container">
-        <label for="alphaSlide">Alpha</label>
-        <input type="range" min="0" max="100" value="100" id="alphaSlide">
-        <span id="alphaValue">1.00</span>
-      </div>
-      <div class="slider-container">
-        <label for="sizeSlide">Size</label>
-        <input type="range" min="5" max="40" value="5" id="sizeSlide">
-        <span id="sizeValue">5</span>
-      </div>
-      <div class="slider-container">
-        <label for="segSlide">Segments</label>
-        <input type="range" min="5" max="30" value="10" id="segSlide">
-        <span id="segValue">10</span>
+        <label for="leftArmSlide">Left Arm Angle</label>
+        <input type="range" min="100" max="140" value="135" id="leftArmSlide">
+        <span id="leftArmValue">135</span>
       </div>
     </div>
-
     
     <div class="description">
         <strong>Name:</strong> Brian Jin <br>
         <strong>Email:</strong> byjin@ucsc.edu <br> <br>
-      </p>
     </div>
 
     <script src="lib/webgl-utils.js"></script>
     <script src="lib/webgl-debug.js"></script>
     <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
     <script src="Triangle.js"></script>
     <script src="Circle.js"></script>
     <script src="Point.js"></script>
-    <script src="asgn1.js"></script>
+    <script src="Cube.js"></script>
+    <script src="asgn2.js"></script>
   </body>
 </html>
